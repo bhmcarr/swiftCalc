@@ -238,7 +238,7 @@
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYq-0i-zaU">
+                                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYq-0i-zaU">
                                                 <rect key="frame" x="231.5" y="0.0" width="103.5" height="94.5"/>
                                                 <color key="backgroundColor" red="0.94509803921568625" green="0.76862745098039209" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
@@ -246,7 +246,7 @@
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="equalsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xcx-Ie-fZQ"/>
+                                                    <action selector="opPressed:" destination="BYZ-38-t0r" eventType="touchDragInside" id="MEU-uI-ekl"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -264,6 +264,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="divisionButton" destination="IuG-nA-0gV" id="7u8-2K-K5b"/>
+                        <outlet property="minusButton" destination="qS5-Ch-8L8" id="fjN-tC-5Rs"/>
+                        <outlet property="multiplyButton" destination="xI1-FU-pqD" id="Ipp-Xt-ktZ"/>
+                        <outlet property="plusButton" destination="bl9-Qe-GLN" id="Gun-mb-Fr6"/>
                         <outlet property="screenLabel" destination="3QE-5U-beK" id="WuF-J2-RIY"/>
                     </connections>
                 </viewController>

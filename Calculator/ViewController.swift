@@ -16,7 +16,6 @@ class ViewController: UIViewController {
     var numberBuffer: String = ""
     var numberArray: [Int] = []
     var opArray: [Character] = []
-    var runningValue: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +28,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func opPressed(_ sender: UIButton) {
-        if numberBuffer != "" { // stop app from crashing when you hit an op before any numbers
-            numberArray.append(Int(numberBuffer)!)
+        if numberBuffer == "" {
+            return
         }
+        numberArray.append(Int(numberBuffer)!)
         // put operator into the opArray
         switch sender.tag {
         case 10: // +
@@ -74,9 +74,9 @@ class ViewController: UIViewController {
             default:
                 print("Something happened.")
             }
+            numberArray.removeFirst()
         }
         opArray.removeAll()
-        numberArray.removeFirst()
         numberBuffer = "\(runningValue)"
         updateScreen()
     }
@@ -100,6 +100,11 @@ class ViewController: UIViewController {
     func clearOp() {
         opArray.removeAll()
         print("Op array cleared.")
+    }
+    
+    func clearNumber() {
+        numberArray.removeAll()
+        print("Number array cleared")
     }
 
 }
